@@ -1,0 +1,427 @@
+/* Import Beautiful Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Dancing+Script:wght@700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+
+    font-family:'Poppins',sans-serif;
+
+    background:linear-gradient(-45deg,#ff9a9e,#fad0c4,#fbc2eb,#f6d365);
+    background-size:400% 400%;
+
+    animation:bgAnimation 10s ease infinite;
+}
+
+@keyframes bgAnimation{
+
+0%{
+background-position:0% 50%;
+}
+
+50%{
+background-position:100% 50%;
+}
+
+100%{
+background-position:0% 50%;
+}
+
+}
+
+.container{
+
+text-align:center;
+
+background:rgba(255,255,255,0.25);
+
+padding:50px;
+
+border-radius:25px;
+
+backdrop-filter:blur(12px);
+
+box-shadow:0 20px 40px rgba(0,0,0,.15);
+
+width:90%;
+max-width:600px;
+
+}
+
+h1{
+
+font-family:'Dancing Script',cursive;
+
+font-size:60px;
+
+color:white;
+
+margin-bottom:20px;
+
+}
+
+p{
+
+font-size:20px;
+
+color:white;
+
+margin-bottom:35px;
+
+}
+
+button{
+
+padding:15px 35px;
+
+border:none;
+
+border-radius:50px;
+
+font-size:18px;
+
+cursor:pointer;
+
+background:white;
+
+color:#ff4f81;
+
+transition:.3s;
+
+font-weight:bold;
+
+}
+
+button:hover{
+
+transform:scale(1.1);
+
+box-shadow:0 10px 25px rgba(255,255,255,.5);
+
+}
+.heart{
+    position:fixed;
+    bottom:-50px;
+    animation:floatUp linear forwards;
+    pointer-events:none;
+}
+
+@keyframes floatUp{
+
+0%{
+transform:translateY(0) rotate(0deg);
+opacity:1;
+}
+
+100%{
+transform:translateY(-120vh) rotate(360deg);
+opacity:0;
+}
+
+}
+.second-page{
+
+display:none;
+
+text-align:center;
+
+background:rgba(255,255,255,.25);
+
+padding:50px;
+
+border-radius:25px;
+
+backdrop-filter:blur(12px);
+
+box-shadow:0 20px 40px rgba(0,0,0,.15);
+
+width:90%;
+max-width:700px;
+
+animation:fadeIn 1s;
+
+}
+
+@keyframes fadeIn{
+
+from{
+
+opacity:0;
+transform:scale(.8);
+
+}
+
+to{
+
+opacity:1;
+transform:scale(1);
+
+}
+
+}
+.second-page img{
+
+max-width:90%;
+
+max-height:70vh;
+
+width:auto;
+
+height:auto;
+
+border-radius:20px;
+
+margin:25px 0;
+
+box-shadow:0 15px 30px rgba(0,0,0,.25);
+
+transition:.5s;
+}
+
+
+.buttons{
+
+display:flex;
+
+justify-content:center;
+
+gap:20px;
+
+margin-bottom:25px;
+
+}
+
+#letterBtn{
+
+background:#ff4f81;
+
+color:white;
+
+}
+.letter-page{
+
+display:none;
+
+text-align:center;
+
+background:rgba(255,255,255,.22);
+
+padding:40px;
+
+border-radius:25px;
+
+backdrop-filter:blur(12px);
+
+max-width:750px;
+
+animation:fadeIn 1s;
+
+}
+
+.letter{
+
+margin:30px auto;
+
+padding:25px;
+
+background:#fff9f2;
+border:3px solid #f8d7da;
+box-shadow:0 15px 35px rgba(0,0,0,.2);
+
+border-radius:18px;
+
+color:#444;
+
+line-height:1.8;
+
+font-size:20px;
+
+text-align:left;
+
+min-height:260px;
+
+}
+#letterText{
+    color:#333;
+    font-size:20px;
+    line-height:1.8;
+    font-family:'Poppins', sans-serif;
+    white-space:pre-line;
+}
+.final-page{
+
+display:none;
+
+text-align:center;
+
+background:rgba(255,255,255,.22);
+
+padding:50px;
+
+border-radius:25px;
+
+backdrop-filter:blur(15px);
+
+max-width:700px;
+
+animation:fadeIn 1.2s;
+
+}
+
+.final-page h1{
+
+font-size:60px;
+
+margin-bottom:20px;
+
+}
+
+.final-page h2{
+
+font-size:38px;
+
+color:white;
+
+margin-bottom:25px;
+
+}
+
+.ending{
+
+font-size:22px;
+
+color:white;
+
+line-height:2;
+
+margin-bottom:35px;
+
+}
+
+#musicBtn{
+
+background:#ff4f81;
+
+color:white;
+
+font-size:18px;
+
+}
+#loveText{
+
+font-size:48px;
+
+margin:25px 0;
+
+animation:glow 2s infinite alternate;
+
+color:#fff;
+
+}
+
+#quote{
+
+font-size:24px;
+
+margin:30px;
+
+color:white;
+
+font-style:italic;
+
+opacity:0;
+
+animation:fadeQuote 3s forwards;
+
+animation-delay:2s;
+
+}
+
+.credit{
+
+margin-top:40px;
+
+font-size:16px;
+
+opacity:.8;
+
+color:white;
+
+}
+
+@keyframes glow{
+
+from{
+
+text-shadow:0 0 10px #ff4f81;
+
+}
+
+to{
+
+text-shadow:
+
+0 0 20px #ff4f81,
+
+0 0 40px #ff1493,
+
+0 0 60px #ff1493;
+
+}
+
+}
+
+@keyframes fadeQuote{
+
+from{
+
+opacity:0;
+
+transform:translateY(20px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+button{
+
+transition:0.3s;
+
+}
+
+button:hover{
+
+transform:scale(1.08);
+
+box-shadow:0 10px 25px rgba(255,79,129,.5);
+
+}
+.footer{
+
+    margin-top:25px;
+
+    font-size:20px;
+
+    font-style:italic;
+
+    color:white;
+
+    opacity:0.9;
+
+}
